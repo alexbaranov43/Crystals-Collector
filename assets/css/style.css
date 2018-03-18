@@ -1,0 +1,11 @@
+h1 {
+    font-size: 34px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    border-radius: 15px;
+    border: white 3px solid;
+}

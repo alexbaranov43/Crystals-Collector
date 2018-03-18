@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Collector</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+   
+</head>
+
+<body>
+    <div class="header">
+        <h1> Crystals Collector!</h1>
+    </div>
+
+    <div class="instructions">
+        <p>You will be given a random number at the start of the game
+        </p>
+        <br>
+        <p>There are four crystals below. By clicking on a crystal you will add a specific ammount of points to your total score.
+        </p>
+        <br>
+        <p>You winn the game by matching your total score to random number, you lose the game if your total score goes above
+            te random number.
+        </p>
+        <br>
+        <p>The value of each crystal is hidden from you until you click on it.
+        </p>
+        <br>
+        <p>Each time when the game starts, the game will change the values of each crystal.
+        </p>
+        <br>
+    </div>
+    <div class="number">
+        <p>Target Number: </p>
+        <span id="random-number"></span>
+    </div>
+    <div class="wins-losses">
+        <h3>Wins:
+            <span class="wins"></span>
+        </h3>
+        <h3>Losses:
+            <span class="losses"></span>
+        </h3>
+    </div>
+    <div class="crystals">
+    <img class="crystal1" src="assets/images/crystal1.jpg" >
+    <img class="crystal2" src="assets/images/crystal2.jpg">
+    <img class="crystal3" src="assets/images/crystal3really.jpg" >
+    <img class="crystal4" src="assets/images/crystal4.jpg" >
+    </div>
+    <div class="scoreMessage">
+        <h2>Your score is:
+        </h2>
+    </div>
+    <div class="scoreBox">
+        <span class="score"></span>
+    </div>
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
