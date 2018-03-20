@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     //variables
-
+    
     var wins = 0;
     var losses = 0;
     var targetNumber = 18 + Math.floor(Math.random() * 102);
