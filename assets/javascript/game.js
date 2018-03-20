@@ -1,159 +1,55 @@
 $(document).ready(function () {
 
     //variables
+
     var wins = 0;
     var losses = 0;
     var targetNumber = 18 + Math.floor(Math.random() * 102);
-    var score = "";
-    var crystalValue1 = 1 + Math.floor(Math.random() * 12);
-    var crystalValue2 = 1 + Math.floor(Math.random() * 12);
-    var crystalValue3 = 1 + Math.floor(Math.random() * 12);
-    var crystalValue4 = 1 + Math.floor(Math.random() * 12);
+    var score = 0;
+
     //initial values
+    function assignValues() {
+        $('.crystal1').attr('data-num', 1 + Math.floor(Math.random() * 12)) ;
+        $('.crystal2').attr('data-num', 1 + Math.floor(Math.random() * 12));
+        $('.crystal3').attr('data-num', 1 + Math.floor(Math.random() * 12));
+        $('.crystal4').attr('data-num', 1 + Math.floor(Math.random() * 12));        
+    }
 
-  $("#random-number").text(targetNumber);
+    $("#random-number").text(targetNumber);
 
+    function resetGame() {
+        targetNumber = 18 + Math.floor(Math.random() * 102);
+        $("#random-number").text(targetNumber);
+        score = 0;
+        $(".score").text(score);
+        assignValues();
+    };
 
-    //onclick functionality
-    $(".crystal1").click(function () {
-        if (score < targetNumber) {
-            alert("You added " + crystalValue1 + " points to your energy level!");
-            score = parseInt(score + crystalValue1);
-            $(".score").text(score);
+    assignValues();
+     //onclick functionality
 
-
-    } else if (score >= targetNumber + 1) {
-            alert("Oh no, you lost!");
+$('.crystal').on('click', function (e) {
+var num = parseInt($(this).attr('data-num'));
+        console.log(num);
+        score += num;
+        console.log('target number: ', targetNumber);
+        console.log('current score: ', score);
+        $(".score").text(score)
+        if (score > targetNumber) {
+            alert("You Lose, Please Try Again")
             losses++;
             $(".losses").text(losses);
-            targetNumber = 18 + Math.floor(Math.random() * 102);
-            $("#random-number").text(targetNumber);
-            score = "";
-            $(".score").text(score);
-            crystalValue1 = 1 + Math.floor(Math.random() * 12);
-            crystalValue2 = 1 + Math.floor(Math.random() * 12);
-            crystalValue3 = 1 + Math.floor(Math.random() * 12);
-            crystalValue4 = 1 + Math.floor(Math.random() * 12);
-        } else if (score === targetNumber) {
-            alert("YOU WIN!!");
+            resetGame();
+            $(".score").text(score)
+            console.log('this should alert you lossed');
+           
+        } else if (score === targetNumber){
+            alert("You Win!!");
             wins++;
             $(".wins").text(wins);
-            targetNumber = 18 + Math.floor(Math.random() * 102);
-            $("#random-number").text(targetNumber);
-            score = "";
-            $(".score").text(score);
-            crystalValue1 = 1 + Math.floor(Math.random() * 12);
-            crystalValue2 = 1 + Math.floor(Math.random() * 12);
-            crystalValue3 = 1 + Math.floor(Math.random() * 12);
-            crystalValue4 = 1 + Math.floor(Math.random() * 12);
+            $(".score").text(score)
+            resetGame();
         }
     });
-
-    $(".crystal2").click(function () {
-        if (score < targetNumber) {
-            alert("You added " + crystalValue2 + " points to your energy level!");
-            score = parseInt(score + crystalValue2);
-            $(".score").text(score);
-        } else if (score >= targetNumber + 1) {
-            alert("Oh no, you lost!");
-            losses++;
-            $(".losses").text(losses);
-            targetNumber = 18 + Math.floor(Math.random() * 102);
-            $("#random-number").text(targetNumber);
-            score = "";
-            $(".score").text(score);
-            crystalValue1 = 1 + Math.floor(Math.random() * 12);
-            crystalValue2 = 1 + Math.floor(Math.random() * 12);
-            crystalValue3 = 1 + Math.floor(Math.random() * 12);
-            crystalValue4 = 1 + Math.floor(Math.random() * 12);
-        } else if (score === targetNumber) {
-            alert("YOU WIN!!");
-            wins++;
-            $(".wins").text(wins);
-            targetNumber = 18 + Math.floor(Math.random() * 102);
-            $("#random-number").text(targetNumber);
-            score = "";
-            $(".score").text(score);
-            crystalValue1 = 1 + Math.floor(Math.random() * 12);
-            crystalValue2 = 1 + Math.floor(Math.random() * 12);
-            crystalValue3 = 1 + Math.floor(Math.random() * 12);
-            crystalValue4 = 1 + Math.floor(Math.random() * 12);
-        };
-    })
-
-    $(".crystal3").click(function () {
-        if (score < targetNumber) {
-            alert("You added " + crystalValue3 + " points to your energy level!");
-            score = parseInt(score + crystalValue3);
-            $(".score").text(score);
-        } else if (score >= targetNumber + 1) {
-            alert("Oh no, you lost!");
-            losses++;
-            $(".losses").text(losses);
-            targetNumber = 18 + Math.floor(Math.random() * 102);
-            $("#random-number").text(targetNumber);
-            score = "";
-            $(".score").text(score);
-            crystalValue1 = 1 + Math.floor(Math.random() * 12);
-            crystalValue2 = 1 + Math.floor(Math.random() * 12);
-            crystalValue3 = 1 + Math.floor(Math.random() * 12);
-            crystalValue4 = 1 + Math.floor(Math.random() * 12);
-        } else if (score === targetNumber) {
-            alert("YOU WIN!!");
-            wins++;
-            $(".wins").text(wins);
-            targetNumber = 18 + Math.floor(Math.random() * 102);
-            $("#random-number").text(targetNumber);
-            score = "";
-            $(".score").text(score);
-            crystalValue1 = 1 + Math.floor(Math.random() * 12);
-            crystalValue2 = 1 + Math.floor(Math.random() * 12);
-            crystalValue3 = 1 + Math.floor(Math.random() * 12);
-            crystalValue4 = 1 + Math.floor(Math.random() * 12);
-        };
-    })
-
-    $(".crystal4").click(function () {
-        if (score < targetNumber) {
-            alert("You added " + crystalValue4 + " points to your energy level!");
-            score = parseInt(score + crystalValue4);
-            $(".score").text(score);
-        } else if (score >= targetNumber + 1) {
-            alert("Oh no, you lost!");
-            losses++;
-            $(".losses").text(losses);
-             targetNumber = 18 + Math.floor(Math.random() * 102);
-             $("#random-number").text(targetNumber);
-            score = "";
-            $(".score").text(score);
-            crystalValue1 = 1 + Math.floor(Math.random() * 12);
-            crystalValue2 = 1 + Math.floor(Math.random() * 12);
-            crystalValue3 = 1 + Math.floor(Math.random() * 12);
-            crystalValue4 = 1 + Math.floor(Math.random() * 12);
-        } else if (score === targetNumber) {
-            alert("YOU WIN!!");
-            wins++;
-            $(".wins").text(wins);
-            $(".crystals").click(function(){return false;});
-            targetNumber = 18 + Math.floor(Math.random() * 102);
-            $("#random-number").text(targetNumber);
-            score = "";
-            $(".score").text(score)
-            crystalValue1 = 1 + Math.floor(Math.random() * 12);
-            crystalValue2 = 1 + Math.floor(Math.random() * 12);
-            crystalValue3 = 1 + Math.floor(Math.random() * 12);
-            crystalValue4 = 1 + Math.floor(Math.random() * 12);
-        };
-    })
-
-
-
-
-
-
-
-
-
-})
-
+});
 
