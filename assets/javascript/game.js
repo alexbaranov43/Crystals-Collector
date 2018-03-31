@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+$("audio").hide();
     //variables
     
     var wins = 0;

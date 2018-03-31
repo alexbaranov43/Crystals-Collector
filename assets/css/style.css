@@ -2,6 +2,7 @@ body {
     background-image: url(../images/outer-space-wallpaper-pictures.jpg);
     color: azure;
     font-size: 24px;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .header {
@@ -10,22 +11,23 @@ body {
     margin-bottom: 10px;
     margin-left: 10px;
     padding: 5px;
-    border: 2px solid whitesmoke;
+    border: 3px solid #d1d8e0;
     border-radius: 15px;
-    background: rebeccapurple;
+    background: #8854d0;
     font-size: 40px;
     font: bold;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Shrikhand', cursive;
     text-align: center;
 }
 
 .instructions {
+    font-family: 'Orbitron', sans-serif;
     width: 50%;
-    background: tomato;
+    background: #eb3b5a;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 10px;
-    border: 2px solid whitesmoke;
+    border: 2px solid #d1d8e0;
     border-radius: 15px; 
     padding: 5px;
 }
@@ -40,12 +42,12 @@ body {
     float: left;
     width: 20%;
     height: 100px;
-    background: steelblue;   
+    background: #2d98da;   
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 10px;
     padding: 5px;
-    border: 2px solid whitesmoke;
+    border: 2px solid #d1d8e0;
     border-radius: 15px; 
 
 }
@@ -55,12 +57,12 @@ body {
     float: left;
     width: 15%;
     height: 65px;
-    background: seagreen;   
+    background: #26de81;   
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 10px;
     padding: 5px;
-    border: 2px solid whitesmoke;
+    border: 2px solid #d1d8e0;
     border-radius: 15px; 
 
 
@@ -70,12 +72,12 @@ body {
     float: left;
     width: 20%;
     height: 65px;
-    background: seagreen;   
+    background: #26de81;   
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 10px;
     padding: 5px;
-    border: 2px solid whitesmoke;
+    border: 2px solid #d1d8e0;
     border-radius: 15px; 
 
 }
