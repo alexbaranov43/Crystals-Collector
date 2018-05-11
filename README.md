@@ -1,1 +1,1 @@
-# week-4-game
+# A simple app utlizing jQuery onClick events
